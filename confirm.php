@@ -58,20 +58,25 @@ $gender = $_POST['gender'];
 
         });
 
+        //ボタンが押されているかチェックする関数
         const checkComplete =  () => {
 
+            //cookie全体を取得
             const cookies = document.cookie;
 
+            //もしcookieがあれば
             if (cookies) {
+                //;でsplit
                 const cookiesArray = cookies.split(";");
-
                 for (let i = 0; cookiesArray.length; i++) {
+                    //key=valueを=でsplit
                     const cookieArray = cookiesArray[i].split("=");
                     if (cookieArray[0] === "complete") {
                         return cookieArray[1];
                     }
                 }
             }
+            //何もなければfalse
             return false;
 
         }
