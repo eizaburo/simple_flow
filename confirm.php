@@ -1,6 +1,7 @@
 <?php
 
 $name = $_POST['name'];
+$gender = $_POST['gender'];
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +19,11 @@ $name = $_POST['name'];
             <label>氏名</label>
             <span><?php echo $name; ?></span>
             <input type="hidden" name="name" value="<?php echo $name; ?>">
+        </div>
+        <div>
+            <label>性別</label>
+            <span><?php echo $gender; ?></span>
+            <input type="hidden" name="gender" value="<?php echo $gender; ?>">
         </div>
         <div>
             <button id="back">戻る</button>
